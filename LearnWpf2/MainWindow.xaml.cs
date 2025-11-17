@@ -20,5 +20,31 @@ namespace LearnWpf2
         {
             InitializeComponent();
         }
+
+        private void SingInButton(object sender, RoutedEventArgs e)
+        {
+            string login = loginTextBox.Text.Trim();
+            string Password = PasswordTexBox.Password.Trim();
+
+            if(login.Length < 5)
+            {
+                loginTextBox.ToolTip = "Введите логин более 5 символов";
+                loginTextBox.Background = Brushes.Red; 
+            }
+            else if(Password.Length < 8)
+            {
+                PasswordTexBox.ToolTip = "Введите пароль более 8 символов";
+                PasswordTexBox.Background = Brushes.Red;
+            }
+           else
+            {
+                loginTextBox.ToolTip = "";
+                loginTextBox.Background = Brushes.Transparent;
+                PasswordTexBox.ToolTip = "";
+                PasswordTexBox.Background = Brushes.Transparent;
+
+                MessageBox.Show("Вы успешно вошли");
+            }
+        }
     }
 }

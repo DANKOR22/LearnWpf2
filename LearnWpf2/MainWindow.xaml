@@ -20,12 +20,14 @@
                 <TextBlock Text="Дратути!" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
 
                 <Grid Margin=" 0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Войти как Администратор" />
-                    <Button HorizontalAlignment="Right" Content="Войти как Cотрудник" Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button x:Name="SingInAdmin" HorizontalAlignment="Left" Content="Войти как Администратор" />
+                    <Button x:Name="SiingInEmployee" HorizontalAlignment="Right" Content="Войти как Cотрудник" Style="{StaticResource MaterialDesignFlatButton}"/>
                 </Grid>
 
-                <TextBox materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" FontWeight="Black"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="15" FontWeight="Black"/>
+                <TextBox x:Name="loginTextBox" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="15" FontWeight="Black"/>
+                <PasswordBox x:Name="PasswordTexBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="15" FontWeight="Black"/>
+
+                <Button Content="Войти" Cursor="Hand" Margin="0 20" Click="SingInButton" />
             </StackPanel>
 
         </Border>
